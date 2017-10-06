@@ -1,0 +1,27 @@
+  #header {
+      background-color: #000;
+      color: #FFF;
+      text-align: center;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+    .panel-primary .content-header {
+      color: #FFF;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    } 
+    .table>thead>tr>th {
+      text-transform: capitalize;
+    }
+    .table>tbody tr:first-of-type td {
+      border-top: none;
+    }
+    .table>tbody tr:nth-child(even) {
+      background-color: #eee;
+    }
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }

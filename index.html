@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Train Application</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron" id="header">
+      <h1>Train Schedule</h1>
+      <p>Train to wonderland</p>
+    </div>
+    <div class="panel panel-primary " train-data">
+        <div class="panel-heading content-header">
+          <h3 class="panel-title">Current Train Schedule</h3>
+        </div>
+      <div class="panel-body">
+        
+          <table class="table">
+            <thead>
+              <tr>
+              <th>Train name</th>
+              <th>Destination</th>
+              <th>Frequency (min)</th>
+              <th>Next Arrival</th>
+              <th>Minutes Away</th>
+              </tr>
+            </thead>
+          <tbody id="table-body">
+          
+          </tbody>
+        </table>
+        </div>
+    </div>
+    <div class="panel panel-primary" id="add-new-train">
+        <div class="panel-heading content-header">
+          <h3 class="panel-title">Add Train</h3>
+        </div>
+      <div class="panel-body">
+          <form id="train-form">
+            
+            <div class="form-group">
+              <label for="name">Train Name</label>
+              <input type="text" class="form-control" id="nameInput" >
+            </div>
+          <!-- change date within forms -->
+            <div class="form-group">
+              <label for="destination">Destination</label>
+              <input type="text" class="form-control" id="destinationInput">
+            </div>
+            <!-- add moment so date is miltary time -->
+            <label for="start-date">Train Time -- in military time</label>
+            <div class="input-group date">
+              <input type="text" class="form-control" id="timeInput" id="train-time">
+            </div>
+            <label for="rate">Frequency -- in minutes</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="frequencyInput">
+              <!-- change this as well -->
+            </div>
+            <button type="submit" class="btn btn-primary" id="train-form-submit">Submit</button>
+          </form>
+        </div>
+      </div>
+  </div>
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Bootstap datepicker calendar -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js" crossorigin="anonymous"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+
+
+  <!-- MOMENTS LIBRARY -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+  <script type="text/javascript" src="javascript/script.js"></script>
+
+  </script>
+</body>
+</html>
